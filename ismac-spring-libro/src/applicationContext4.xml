@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.1.xsd
+">
+
+
+<bean id="beanCliente" class="com.distribuida.entities.Cliente">
+	
+	<property name="id_cliente" value="1"></property>
+	<property name="cedula" value="1755414727"></property>
+	<property name="nombre" value="Paul"></property>
+	<property name="apellido" value="Llulluna"></property>
+	<property name="edad" value="19"></property>
+	<property name="fecha_nac" value=""></property>
+	<property name="direccion" value="Tumbaco"></property>
+	<property name="telefono" value="0958783424"></property>
+	<property name="correo" value="jassonl@tecnologicoismac.edu.ec"></property>
+			
+	</bean>
+	
+	
+	<bean id="beanLibro" class="com.distribuida.entities.Libro">
+	
+	<property name="idlibro" value="1"></property>
+	<property name="titulo" value="Don"></property>
+	<property name="editorial" value="Animation"></property>
+	<property name="num_paginas" value="100"></property>
+	<property name="edicion" value="20"></property>
+	
+	</bean>
+	
+	
+	
+	<bean id="beanFactura" class="com.distribuida.entities.Factura">
+	
+	<property name="id_factura" value="1"></property>
+	<property name="fecha" value="0"></property>
+	<property name="total_neto" value="1"></property>
+	<property name="iva" value="00012"></property>
+	<property name="total" value="1.11"></property>
+	
+	</bean>
+	
+
+	
+	<bean id="beanDetalleFactura" class="com.distribuida.entities.DetalleFactura">
+	
+	<property name="id_detallefactura" value="1"></property>
+	<property name="cantidad" value="1"></property>
+	<property name="subtotal" value="1"></property>
+	<property name="factura" value="1"></property>
+	<property name="producto" value="1"></property>
+	
+	</bean>
+	
+		<bean id="beanCategoria" class="com.distribuida.entities.Categoria">
+	
+	<property name="id_categoria" value="1"></property>
+	<property name="categoria" value="Infantil"></property>
+	<property name="descripcion" value="Libro edicion limitada"></property>
+	
+	</bean>
+	
+	
+		<bean id="beanAutor" class="com.distribuida.entities.Autor">
+	
+	<property name="id_autor" value="1"></property>
+	<property name="nombre" value="Quijotes"></property>
+	<property name="apellido" value="Ape"></property>
+	<property name="pais" value="No se"></property>
+	<property name="direccion" value="Muy lejos"></property>
+	<property name="telefono" value="2986598798"></property>
+	<property name="correo" value="quijotes@email"></property>
+	
+	
+	</bean>
+
+
+
+</beans>
