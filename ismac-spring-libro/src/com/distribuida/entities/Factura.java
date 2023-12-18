@@ -1,16 +1,21 @@
 package com.distribuida.entities;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Factura {
 	
 	
 	//ATRIBUTOS
-		private int id_factura; 
+		private int id_Factura; 
 		private int fecha;         
-		private float total_neto; 
+		private float total_Neto; 
 		private float iva; 
 		private float total;
 		
 		//GENERAMOS CLIENTE
+		@Autowired
 		private Cliente cliente;  //CLIENTE
 		
 
@@ -28,11 +33,11 @@ public class Factura {
 		
 		
 		//METODOS SET Y GET
-		public int getId_factura() {
-			return id_factura;
+		public int getId_Factura() {
+			return id_Factura;
 		}
-		public void setId_factura(int id_factura) {
-			this.id_factura = id_factura;
+		public void setId_Factura(int id_Factura) {
+			this.id_Factura = id_Factura;
 		}
 		public int getFecha() {
 			return fecha;
@@ -40,11 +45,11 @@ public class Factura {
 		public void setFecha(int fecha) {
 			this.fecha = fecha;
 		}
-		public float getTotal_neto() {
-			return total_neto;
+		public float getTotal_Neto() {
+			return total_Neto;
 		}
-		public void setTotal_neto(float total_neto) {
-			this.total_neto = total_neto;
+		public void setTotal_Neto(float total_Neto) {
+			this.total_Neto = total_Neto;
 		}
 		public float getIva() {
 			return iva;
@@ -75,7 +80,7 @@ public class Factura {
 		//IMPRIMIR DATOS 
 		@Override
 		public String toString() {
-			return "Factura [id_factura=" + id_factura + ", fecha=" + fecha + ", total_neto=" + total_neto + ", iva="
+			return "Factura [id_Factura=" + id_Factura + ", fecha=" + fecha + ", total_Neto=" + total_Neto + ", iva="
 					+ iva + ", total=" + total + ", cliente=" + cliente + "]";
 		}
 		
