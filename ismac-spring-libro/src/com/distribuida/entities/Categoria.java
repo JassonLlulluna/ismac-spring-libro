@@ -1,10 +1,13 @@
 package com.distribuida.entities;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Categoria {
 	
 	
 	//ATRIBUTOS
-	private int id_categoria;
+	private int id_Categoria;
 	private String categoria;
 	private String descripcion;
 	
@@ -16,12 +19,12 @@ public class Categoria {
 	
 	
 	//METODO SET Y GET
-	public int getId_categoria() {
-		return id_categoria;
+	public int getId_Categoria() {
+		return id_Categoria;
 	}
 
-	public void setId_categoria(int id_categoria) {
-		this.id_categoria = id_categoria;
+	public void setId_Categoria(int id_Categoria) {
+		this.id_Categoria = id_Categoria;
 	}
 
 	public String getCategoria() {
@@ -46,7 +49,7 @@ public class Categoria {
 	//MOSTRAR LOS DATOS
 	@Override
 	public String toString() {
-		return "Categoria [id_categoria=" + id_categoria + ", categoria=" + categoria + ", descripcion=" + descripcion
+		return "Categoria [id_Categoria=" + id_Categoria + ", categoria=" + categoria + ", descripcion=" + descripcion
 				+ "]";
 	}
 	
