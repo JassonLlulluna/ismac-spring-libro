@@ -1,10 +1,13 @@
 package com.distribuida.entities;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Autor {
 	
 	
 	//ATRIBUTOS
-	private int id_autor;
+	private int id_Autor;
 	private String nombre;
 	private String apellido;
 	private String pais;
@@ -22,13 +25,13 @@ public class Autor {
 	
 	//METODOS SET Y GET
 
-	public int getId_autor() {
-		return id_autor;
+	public int getId_Autor() {
+		return id_Autor;
 	}
 
 
-	public void setId_autor(int id_autor) {
-		this.id_autor = id_autor;
+	public void setId_Autor(int id_Autor) {
+		this.id_Autor = id_Autor;
 	}
 
 
@@ -97,7 +100,7 @@ public class Autor {
 	
 	@Override
 	public String toString() {
-		return "Autor [id_autor=" + id_autor + ", nombre=" + nombre + ", apellido=" + apellido + ", pais=" + pais
+		return "Autor [id_Autor=" + id_Autor + ", nombre=" + nombre + ", apellido=" + apellido + ", pais=" + pais
 				+ ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + "]";
 	}
 	
