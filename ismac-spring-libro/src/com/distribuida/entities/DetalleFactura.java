@@ -1,26 +1,35 @@
 package com.distribuida.entities;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class DetalleFactura {
 	
 	//ATRIBUTOS
-	private int id_detallefactura; 
+	private int id_DetalleFactura; 
 	private int cantidad; 
 	private float subtotal;
 	
 	
 	//FACTURA Y LIBRO
+	@Autowired
 	private Factura factura;  // FACTURA
+	@Autowired
 	private Libro libro;// LIBRO
 	
 	
 	
+	public DetalleFactura(){
+		
+	}
 	
 	//METODOS SET Y GET
-	public int getId_detallefactura() {
-		return id_detallefactura;
+	public int getId_DetalleFactura() {
+		return id_DetalleFactura;
 	}
-	public void setId_detallefactura(int id_detallefactura) {
-		this.id_detallefactura = id_detallefactura;
+	public void setId_DetalleFactura(int id_DetalleFactura) {
+		this.id_DetalleFactura = id_DetalleFactura;
 	}
 	public int getCantidad() {
 		return cantidad;
@@ -56,7 +65,7 @@ public class DetalleFactura {
 	//IMPRIMIR DATOS
 	@Override
 	public String toString() {
-		return "DetalleFactura [id_detallefactura=" + id_detallefactura + ", cantidad=" + cantidad + ", subtotal="
+		return "DetalleFactura [id_DetalleFactura=" + id_DetalleFactura + ", cantidad=" + cantidad + ", subtotal="
 				+ subtotal + ", factura=" + factura + ", libro=" + libro + "]";
 	}
 	
