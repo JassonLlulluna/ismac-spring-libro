@@ -2,16 +2,22 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class Cliente {
 	
 	
 	//ATRIBUTOS
-	private int id_cliente;
+	private int id_Cliente;
 	private String cedula;
 	private String nombre;
 	private String apellido;
 	private int edad;
-	private Date fecha_nac; // date
+	private Date fecha_Nac; // date
 	private String direccion;
 	private String telefono; // string
 	private String correo;
@@ -26,13 +32,13 @@ public class Cliente {
 
 	
 	//METODOS SET Y GET ESTABLECER Y MOSTRAR
-	public int getId_cliente() {
-		return id_cliente;
+	public int getId_Cliente() {
+		return id_Cliente;
 	}
 
 
-	public void setId_cliente(int id_cliente) {
-		this.id_cliente = id_cliente;
+	public void setId_Cliente(int id_Cliente) {
+		this.id_Cliente = id_Cliente;
 	}
 
 
@@ -76,13 +82,13 @@ public class Cliente {
 	}
 
 
-	public Date getFecha_nac() {
-		return fecha_nac;
+	public Date getFecha_Nac() {
+		return fecha_Nac;
 	}
 
 
-	public void setFecha_nac(Date fecha_nac) {
-		this.fecha_nac = fecha_nac;
+	public void setFecha_Nac(Date fecha_Nac) {
+		this.fecha_Nac = fecha_Nac;
 	}
 
 
@@ -117,12 +123,22 @@ public class Cliente {
 
 
 	
+	@PostConstruct
+	public void despuesCreacion() {
+		System.out.println("Despues de la creacion del bean");
+	}
+
+	@PreDestroy
+	public void antesDestruccion() {
+		System.out.println("Antes de la destruccion del bean");
+	}
+	
 	
 	//MOSTRAR LOS DATOS
 	@Override
 	public String toString() {
-		return "Cliente [id_cliente=" + id_cliente + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido="
-				+ apellido + ", edad=" + edad + ", fecha_nac=" + fecha_nac + ", direccion=" + direccion + ", telefono="
+		return "Cliente [id_cliente=" + id_Cliente + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido="
+				+ apellido + ", edad=" + edad + ", fecha_nac=" + fecha_Nac + ", direccion=" + direccion + ", telefono="
 				+ telefono + ", correo=" + correo + "]";
 	}
 	
