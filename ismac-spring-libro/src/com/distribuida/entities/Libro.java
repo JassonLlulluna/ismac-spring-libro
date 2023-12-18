@@ -2,38 +2,45 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
+@Component
 public class Libro {
 	
 	//ATRIBUTOS
-		private int id_libro;
+		private int id_Libro;
 		private String titulo;
 		private String editorial;
-		private int num_paginas;
+		private int num_Paginas;
 		private String edicion;
 		private String idioma;
-		private Date fecha_publicacion;
+		private Date fecha_Publicacion;
 		private String descripcion;
-		private String tipo_pasta;
+		private String tipo_Pasta;
 		private String isbn;
-		private int num_ejemplares;
+		private int num_Ejemplares;
 		private String portada;
 		private String presentacion;
 		private float precio;
 		
 		
 		//CATEGORIA Y AUTOR
+		@Autowired
 		private Categoria categoria;  // CATEGORIA
+		@Autowired
 		private Autor autor;// AUTOR	
 		
 		
 		
 	//METODOS SET Y GET
 		
-		public int getId_libro() {
-			return id_libro;
+		public int getId_Libro() {
+			return id_Libro;
 		}
-		public void setId_libro(int id_libro) {   ///SET
-			this.id_libro = id_libro;
+		public void setId_Libro(int id_Libro) {   ///SET
+			this.id_Libro = id_Libro;
 		}
 		public String getTitulo() {
 			return titulo;
@@ -47,11 +54,11 @@ public class Libro {
 		public void setEditorial(String editorial) { ///SET
 			this.editorial = editorial;
 		}
-		public int getNum_paginas() {
-			return num_paginas;
+		public int getNum_Paginas() {
+			return num_Paginas;
 		}
-		public void setNum_paginas(int num_paginas) { ///SET
-			this.num_paginas = num_paginas;
+		public void setNum_Paginas(int num_Paginas) { ///SET
+			this.num_Paginas = num_Paginas;
 		}
 		public String getEdicion() {
 			return edicion;
@@ -65,11 +72,11 @@ public class Libro {
 		public void setIdioma(String idioma) {  ///SET
 			this.idioma = idioma;
 		}
-		public Date getFecha_publicacion() {
-			return fecha_publicacion;
+		public Date getFecha_Publicacion() {
+			return fecha_Publicacion;
 		}
 		public void setFecha_publicacion(Date fecha_publicacion) { ///SET
-			this.fecha_publicacion = fecha_publicacion;
+			this.fecha_Publicacion = fecha_publicacion;
 		}
 		public String getDescripcion() {
 			return descripcion;
@@ -77,11 +84,11 @@ public class Libro {
 		public void setDescripcion(String descripcion) {   ///SET
 			this.descripcion = descripcion;
 		}
-		public String getTipo_pasta() {
-			return tipo_pasta;
+		public String getTipo_Pasta() {
+			return tipo_Pasta;
 		}
-		public void setTipo_pasta(String tipo_pasta) {   ///SET
-			this.tipo_pasta = tipo_pasta;
+		public void setTipo_Pasta(String tipo_Pasta) {   ///SET
+			this.tipo_Pasta = tipo_Pasta;
 		}
 		public String getIsbn() {
 			return isbn;
@@ -89,11 +96,11 @@ public class Libro {
 		public void setIsbn(String isbn) {   ///SET
 			this.isbn = isbn;
 		}
-		public int getNum_ejemplares() {
-			return num_ejemplares;
+		public int getNum_Ejemplares() {
+			return num_Ejemplares;
 		}
-		public void setNum_ejemplares(int num_ejemplares) {  ///SET
-			this.num_ejemplares = num_ejemplares;
+		public void setNum_Ejemplares(int num_Ejemplares) {  ///SET
+			this.num_Ejemplares = num_Ejemplares;
 		}
 		public String getPortada() {
 			return portada;
@@ -139,10 +146,10 @@ public class Libro {
 		//MOSTRAMOS LOS DATOS
 		@Override
 		public String toString() {
-			return "Libro [id_libro=" + id_libro + ", titulo=" + titulo + ", editorial=" + editorial + ", num_paginas="
-					+ num_paginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fecha_publicacion="
-					+ fecha_publicacion + ", descripcion=" + descripcion + ", tipo_pasta=" + tipo_pasta + ", isbn="
-					+ isbn + ", num_ejemplares=" + num_ejemplares + ", portada=" + portada + ", presentacion="
+			return "Libro [id_Libro=" + id_Libro + ", titulo=" + titulo + ", editorial=" + editorial + ", num_paginas="
+					+ num_Paginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fecha_publicacion="
+					+ fecha_Publicacion + ", descripcion=" + descripcion + ", tipo_pasta=" + tipo_Pasta + ", isbn="
+					+ isbn + ", num_ejemplares=" + num_Ejemplares + ", portada=" + portada + ", presentacion="
 					+ presentacion + ", precio=" + precio + ", categoria=" + categoria + ", autor=" + autor + "]";
 		}
 		
